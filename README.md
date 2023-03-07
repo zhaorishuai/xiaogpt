@@ -3,6 +3,10 @@ Play ChatGPT with Xiaomi AI Speaker
 
 ![image](https://user-images.githubusercontent.com/15976103/220028375-c193a859-48a1-4270-95b6-ef540e54a621.png)
 
+## Update by zsc
+这个是可行命令
+`python3 xiaogpt.py --hardware LX04 --use_chatgpt_api --use_command`
+
 
 ## 一点原理
 
