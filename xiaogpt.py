@@ -353,7 +353,7 @@ class MiGPT:
                         query = f"{query}，{PROMPT}"
                         # waiting for xiaoai speaker done
                         if not self.mute_xiaoai:
-                            await asyncio.sleep(8)
+                            await asyncio.sleep(4)
                         await self.do_tts("正在问GPT请耐心等待")
                         try:
                             print(
