@@ -13,7 +13,7 @@ import openai
 from aiohttp import ClientSession
 from miservice import MiAccount, MiNAService
 from requests.utils import cookiejar_from_dict
-from revChatGPT.V1 import Chatbot, configure
+#from revChatGPT.V1 import Chatbot, configure
 from rich import print
 
 LATEST_ASK_API = "https://userprofile.mina.mi.com/device_profile/v2/conversation?source=dialogu&hardware={hardware}&timestamp={timestamp}&limit=2"
@@ -163,6 +163,7 @@ class MiGPT:
         # Forced login to refresh to refresh token
         await self.account.login("micoapi")
         self.mina_service = MiNAService(self.account)
+        print(self.mina_service.__dict__)
 
     async def _init_data_hardware(self):
         if self.cookie:
@@ -252,7 +253,7 @@ class MiGPT:
                 # do nothing is ok
                 pass
         else:
-            subprocess.check_output(["micli", self.tts_command, value])
+            subprocess.check_output(["micli.py", self.tts_command, value])
 
     def _normalize(self, message):
         message = message.replace(" ", "--")
